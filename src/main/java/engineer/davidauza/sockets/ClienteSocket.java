@@ -160,7 +160,9 @@ public class ClienteSocket {
             mensaje = mEntrada.readLine();
             System.out.println("\n" + mensaje);
             mensaje = mEntrada.readLine();
-            System.out.println(mensaje.replaceAll("\\*", "\n"));
+            if (mensaje != null) {
+                System.out.println(mensaje.replaceAll("\\*", "\n"));
+            }
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
         }
